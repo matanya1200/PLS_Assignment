@@ -170,6 +170,6 @@ def taylor_series_generator(x):
         yield sum_taylor  # מחזירים את הסכום המעודכן
 
 # שימוש בגנרטור
-gen = taylor_series_generator(2)
+gen = taylor_series_generator(2.71)
 for _ in range(8):
     print(next(gen))
