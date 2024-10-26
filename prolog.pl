@@ -88,12 +88,13 @@ permutation(L, [H|P]) :-  # אם H הוא האיבר הראשון בפרמוטצ
 #אריתמטיקה
 
 #1א
+scum(1, 1).  % בסיס: סכום עד 1 הוא 1
 scum(N, Res) :-
     N > 1,
-    Sum is N + N1,
     N1 is N - 1,
-    scum(N1, Sum).
-scum(1, 1).  # בסיס: סכום עד 1 הוא 1
+    scum(N1, PartialSum),
+    Res is PartialSum + N.
+
 
 
 #1ב
